@@ -11,7 +11,8 @@ async function getInfo(input) {
         const response = await fetch(url + input + APIkey, {
             mode: "cors"
         });
-        console.log(response);
+        result = await response.json();
+        return result;
     } catch {
         console.log("get error");
     }
