@@ -4,11 +4,13 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "Jen",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^6.5.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9"
   }
