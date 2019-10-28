@@ -18,6 +18,15 @@ function displayResult(response) {
     className: "description",
     content: response.weather[0][description]
   });
+
+  // show temperature
+  console.log(response.main.temp);
+  /*createElement({
+    parent: container,
+    element: "p",
+    className: "description",
+    content: response.main.temp
+  }); */
 }
 /*
 function createHeader({ parent, city }) {
@@ -28,6 +37,7 @@ function createHeader({ parent, city }) {
 }
 */
 function creatElement({ parent, element, className, content }) {
+  console.log(content);
   const child = document.createElement(element);
   child.innerText = content;
   child.className = className;
@@ -47,13 +57,15 @@ function createTempDescription({ parent, temp, icon }) {
   parent.appendChild(child);
 }
 */
+
+// contain wind.speed, clouds.all, rain.1h, rain.3h, .....
 function createTable() {
   // loop
 }
 
 // create error notice
 function coverToCelcius(temp) {
-  //convert
+  return temp - 273.15;
 }
 
 export { displayResult };
