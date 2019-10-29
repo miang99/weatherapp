@@ -20,13 +20,13 @@ function displayResult(response) {
   });
 
   // show temperature
-  console.log(response.main.temp);
-  /*createElement({
+  const temp = Math.round(convertToCelcius(response.main.temp));
+  createContent({
     parent: container,
-    element: "p",
+    element: "h3",
     className: "description",
-    content: response.main.temp
-  }); */
+    content: `${temp}\xB0C`
+  });
 }
 
 function createContent({ parent, element, nameClass, content }) {
@@ -43,7 +43,7 @@ function createTable() {
 }
 
 // create error notice
-function coverToCelcius(temp) {
+function convertToCelcius(temp) {
   return temp - 273.15;
 }
 
