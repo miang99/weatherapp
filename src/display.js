@@ -27,6 +27,9 @@ function displayResult(response) {
     className: "description",
     content: `${temp}\xB0C`
   });
+
+  //display result
+  container.style.display = "block";
 }
 
 function createContent({ parent, element, nameClass, content }) {
@@ -35,11 +38,6 @@ function createContent({ parent, element, nameClass, content }) {
   child.innerText = content;
   child.className = nameClass;
   parent.appendChild(child);
-}
-
-// contain wind.speed, clouds.all, rain.1h, rain.3h, .....
-function createTable() {
-  // loop
 }
 
 // create error notice

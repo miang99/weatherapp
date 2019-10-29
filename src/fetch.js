@@ -1,4 +1,5 @@
 import { displayResult } from "./display";
+import { showResetButton } from "./interaction";
 
 function getInput() {
   const input = document.querySelector("#info").value;
@@ -15,8 +16,11 @@ async function getInfo(input) {
     const result = await response.json();
     console.log(result);
     displayResult(result);
+    showResetButton();
   } catch {
     console.log("get error");
+    document.querySelector("#error").style.display = "block";
+    showResetButton();
   }
 }
 export { getInput, getInfo };
