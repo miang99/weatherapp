@@ -4,19 +4,20 @@ function displayResult(response) {
   console.log(response.name);
 
   //create header
-  createElement({
+  //createHeader({ parent: container, city: response.name });
+  createContent({
     parent: container,
     element: "h1",
-    className: "header",
-    content: response.name
+    nameClass: "header",
+    content: `Weather in ${response.name}`
   });
 
   // create description
-  createElement({
+  createContent({
     parent: container,
     element: "p",
-    className: "description",
-    content: response.weather[0][description]
+    nameClass: "description",
+    content: response.weather[0].description
   });
 }
 /*
@@ -27,10 +28,11 @@ function createHeader({ parent, city }) {
   parent.appendChild(header);
 }
 */
-function creatElement({ parent, element, className, content }) {
+function createContent({ parent, element, nameClass, content }) {
+  console.log("in process");
   const child = document.createElement(element);
   child.innerText = content;
-  child.className = className;
+  child.className = nameClass;
   parent.appendChild(child);
 }
 /*
