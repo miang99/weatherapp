@@ -4,7 +4,6 @@ function displayResult(response) {
   console.log(response.name);
 
   //create header
-  //createHeader({ parent: container, city: response.name });
   createContent({
     parent: container,
     element: "h1",
@@ -29,14 +28,6 @@ function displayResult(response) {
     content: response.main.temp
   }); */
 }
-/*
-function createHeader({ parent, city }) {
-  const header = document.createElement("h1");
-  header.innerText = `Weather in ${city}`;
-  header.className = "header";
-  parent.appendChild(header);
-}
-*/
 
 function createContent({ parent, element, nameClass, content }) {
   console.log("in process");
@@ -45,20 +36,6 @@ function createContent({ parent, element, nameClass, content }) {
   child.className = nameClass;
   parent.appendChild(child);
 }
-/*
-function createDescription({ parent, description }) {
-  const child = document.createElement("div");
-  child.innerText = description;
-  child.className = "description";
-  parent.appendChild(child);
-}
-
-function createTempDescription({ parent, temp, icon }) {
-  const child = document.createElement("p");
-  child.innerText = converToCelcius(temp);
-  parent.appendChild(child);
-}
-*/
 
 // contain wind.speed, clouds.all, rain.1h, rain.3h, .....
 function createTable() {
