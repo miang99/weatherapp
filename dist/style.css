@@ -3,3 +3,8 @@
 #error {
   display: none;
 }
+.section {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
+}

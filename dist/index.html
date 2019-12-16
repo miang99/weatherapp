@@ -1,4 +1,73 @@
 <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Jen" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <img src="logo.gif" alt="logo" />
+        <h1 class="title">
+          Weather app
+        </h1>
+      </div>
+    </section>
+    <section class="section" id="form">
+      <form id="input">
+        <div class="field">
+          <label class="label">City: </label>
+          <div class="control">
+            <input
+              class="input"
+              type="text"
+              placeholder="Enter a city name"
+              id="info"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <button value="submit" class="button is-link">Submit</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="section">
+      <div id="result"></div>
+      <div id="error">
+        <h2>Error</h2>
+        <p>You might enter wrong city name. Please try again!</p>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <button id="reset" class="button is-link">Choose other city</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p><strong>Weather app</strong> by <i>Jen</i></p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
+<!--
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -32,3 +101,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+-->
